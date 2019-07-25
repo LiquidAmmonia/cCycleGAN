@@ -15,6 +15,13 @@ import matplotlib.pyplot as plt
 # Functions
 ###############################################################################
 
+def define_G():
+    netG = None
+    use_gpu = len(gpu_ids) > 0
+    if use_gpu:
+        assert (torch.cuda.is_available())
+        
+    netG = GnetGenerator()
 
 
 ##############################################################################
