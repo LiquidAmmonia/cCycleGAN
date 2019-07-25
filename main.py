@@ -49,4 +49,16 @@ opt = parser.parse_args()
 print(opt)
 
 data_loader = CreateDataLoader(opt)
+dataset = data_loader.load_data()
+dataset_size = len(data_loader)
 
+opt.phase = 'val'
+val_data_loader = CreateDataLoader(opt)
+val_dataset = val_data_loader.load_data
+val_dataset_size = len(val_data_loader)
+
+## define models 
+# X is the source and sketch domain
+# Y is the target and photo domain
+# An auxiliary discriminator DA to detect the feature A 
+GX =
